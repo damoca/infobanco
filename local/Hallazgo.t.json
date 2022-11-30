@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "7fdbd7c782817c6eca2beadee7e1352e",
+      "MD5-CAM-1.0.1" : "7500bba5effb1e580f69549d7e9bbabf",
       "PARENT:MD5-CAM-1.0.1" : "05F3E1D9A0891A37F1DD10A47CCFA472"
     },
     "details" : {
@@ -125,7 +125,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Observacion",
+          "text" : "Hallazgo",
           "description" : "Generic document containing a summary of health information about an individual."
         }
       },
