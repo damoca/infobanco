@@ -23,12 +23,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"47a50ccb5c14527d142daf7168f4a6b9">
 		["build_uid"] = <"e41b9327-b040-3eab-a0b1-54677621686b">
-		["MD5-CAM-1.0.1"] = <"e15ee227b401363be1732ec2395f4cdc">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- GenericObservation
+	OBSERVATION[at0000] matches {    -- Generic observation
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -67,7 +67,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"GenericObservation">
+					text = <"Generic observation">
 					description = <"GenericObservation">
 				>
 				["at0001"] = <
