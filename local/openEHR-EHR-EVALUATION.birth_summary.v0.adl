@@ -31,7 +31,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e59ba2424761f34800a615d1a10e5b3b">
+		["MD5-CAM-1.0.1"] = <"8d1518a9b018f71240da8faea4e49a31">
 		["build_uid"] = <"3c8cfadc-6e47-4866-a278-95e45d0084cd">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -82,7 +82,7 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
-					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Comments
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Comment
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -173,7 +173,7 @@ ontology
 					description = <"Additional structured details related to the birth.">
 				>
 				["at0014"] = <
-					text = <"Comments">
+					text = <"Comment">
 					description = <"Additional narrative about the birth not captured in other fields.">
 				>
 			>
