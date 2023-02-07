@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "2.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "322ac453a80ae929921d37a0a198d519",
+      "MD5-CAM-1.0.1" : "6e6028f0e5b4d30ed824325a1129be14",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -3551,7 +3551,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Procedimientos",
+            "text" : "Procedures",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
@@ -3916,7 +3916,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Intervenciones",
+            "text" : "Interventions",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
@@ -4654,7 +4654,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Prescripciones",
+            "text" : "Prescriptions",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
@@ -5082,7 +5082,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Administración de medicamentos",
+            "text" : "Medication administration",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
@@ -5510,7 +5510,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Observaciones",
+            "text" : "Observations",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
@@ -5938,7 +5938,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Problemas de salud",
+            "text" : "Health problem",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
