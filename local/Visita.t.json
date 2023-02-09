@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "2.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "bde64cd1136aa673dbcef9632c977c84",
+      "MD5-CAM-1.0.1" : "b5092f4ce267a1a5040b602e24f28974",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -479,9 +479,32 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "1..*",
+              "nodeId" : "at0018.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
+              "occurrences" : "1..*",
               "nodeId" : "at0013.1",
               "attributes" : [ ],
               "attributeTuples" : [ ],
