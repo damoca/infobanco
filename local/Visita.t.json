@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "2.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b5092f4ce267a1a5040b602e24f28974",
+      "MD5-CAM-1.0.1" : "62579d90dd69b6123b05a3de48bd41f1",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -481,14 +481,12 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "1..*",
               "nodeId" : "at0018.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "1..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -504,7 +502,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "1..*",
+              "occurrences" : "0..*",
               "nodeId" : "at0013.1",
               "attributes" : [ ],
               "attributeTuples" : [ ],
@@ -513,7 +511,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "1..1",
+              "occurrences" : "0..1",
               "nodeId" : "at0015.1",
               "attributes" : [ ],
               "attributeTuples" : [ ],
@@ -522,7 +520,7 @@
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "1..1",
+              "occurrences" : "0..1",
               "nodeId" : "at0015.2",
               "attributes" : [ ],
               "attributeTuples" : [ ],
@@ -753,7 +751,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "86372236E61A02A1C3905BA9033C255F"
+        "PARENT:MD5-CAM-1.0.1" : "bcf8f5de80631d3d5f7a5e4f7c04cc35"
       },
       "details" : {
         "de" : {
