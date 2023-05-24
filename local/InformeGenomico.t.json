@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "4.0.0",
+      "sem_ver" : "5.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f4eeb5f331616fea9365e29a558754c5",
+      "MD5-CAM-1.0.1" : "c021005e0fcb46b6d763ae8ec88170b0",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -229,6 +229,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-birth_summary-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.0.18",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-gender-001.v1",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -1045,7 +1054,53 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "75F0FE57A0A92ECC8129254AAAE50E4F"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Zugehörigkeit, Verwandtschaft oder Verbindung einer Person zu einer oder mehreren Personengruppen, die normalerweise durch die Person selbst identifiziert werden.",
+          "keywords" : [ "Ethnizität", "Kultur", "Sprache", "Rasse", "Stamm", "Zugehörigkeit", "Glauben", "Verwandtschaft", "Identität", "Clan", "Gruppe", "Staatsangehörigkeit", "Staatsbürgerschaft", "Nation", "politisch" ],
+          "use" : "Wird verwendet, um die Zugehörigkeit, Verwandtschaft oder Verbindung einer Person zu einer oder mehreren Personengruppen darzustellen, die normalerweise selbst identifiziert werden.\r\n\r\nEthnizität ist ein Konzept, das häufig uneinheitlich verwendet wird, sodass vorhandene oder ältere Daten inhaltlich sehr unterschiedlich sein können, einschließlich, aber nicht beschränkt auf:\r\n- Eine lange gemeinsame Geschichte (schriftlich oder mündlich);\r\n- Eine kulturelle Tradition, einschließlich familiärer, sozialer und religiöser Bräuche;\r\n- Ein gemeinsamer geografischer Ursprung;\r\n- Eine gemeinsame Sprache oder\r\n- Eine Minderheit oder eigenständige Gruppe innerhalb des lokalen Gemeindekontexts.\r\n\r\nBei der Gestaltung dieses Archetyps wurde die Struktur bewusst einfach gehalten, um alle Anforderungen an die Repräsentation von Ethnizität zu unterstützen. Wenn das Verständnis für ethnische Zugehörigkeit und angemessene Wertesätze identifiziert und vereinbart wird, kann dieser Archetyp wachsen, um die sich entwickelnde Klarheit der Anforderungen zu unterstützen. Das Datenelement „Ethnizität“ ermöglicht Mehrfachvorkommen, sodass mehr als eine ethnische und kulturelle Identität für die Person aus einem einzigen Wertesatz erfasst werden kann, und dass auch mehr als eine Darstellung von „Ethnizität“ erfasst werden kann, z. B. explizite Erfassung First People-Status.\r\n\r\nDas Datenelement „Herkunft“ wurde ebenfalls aufgenommen, um die Bewertung des Gesundheitsrisikos in Bezug auf die Familiengeschichte und Erbkrankheiten zu unterstützen, wie z. B. genetische Variationen, die das Risiko für Morbus Crohn bei aschkenasischen Juden erhöhen.\r\n\r\nDas Ausmaß der Überschneidung zwischen „Ethnizität“ und „Herkunft“ kann von Person zu Person sehr unterschiedlich sein, aber die Aufteilung in einzelne Datenelemente ermöglicht eine angemessene Verwendung im klinischen Kontext zur Entscheidungsunterstützung und Bereitstellung von Gesundheitsleistungen.\r\n\r\nDieser Archetyp wurde so konzipiert, dass er als einzelne Instanz in einer Gesundheitsakte aufgezeichnet und im Laufe der Zeit als neue Version beibehalten, aktualisiert und überarbeitet werden kann.\r\n\r\nEthnizität wird oft als Bestandteil einer demografischen Aufzeichnung einer Person angesehen, wurde jedoch innerhalb dieses klinischen Archetyps für Situationen dargestellt, in denen sie in einer klinischen Datensammlung dargestellt werden muss oder beispielsweise zur Unterstützung einer kultursensiblen und angemessenen Gesundheitsversorgung erforderlich ist in Gemeinschaften der First Nations.\r\n\r\nDas Konzept der Kategorisierung nach Rasse oder Hautfarbe ist umstritten. An einigen Stellen mag der Begriff „Rasse“ als akzeptabel und austauschbar mit „Ethnizität“ angesehen werden, an anderen ist er jedoch illegal. Um zur Verwirrung beizutragen, enthalten viele Wertesätze für ethnische Zugehörigkeit auch Werte, die körperliche Merkmale wie Hautfarbe oder geografische Herkunft beschreiben. Das Konzept „Rasse“ kann manchmal als unbeholfener Proxy zur Identifizierung von Risikofaktoren im Zusammenhang mit sozialen Determinanten der Gesundheit (SDOH) verwendet werden, es wird jedoch dringend empfohlen, Archetypen zu verwenden, die SDOH-Konzepte für eine genauere Datenerfassung darstellen.",
+          "misuse" : "Darf nicht verwendet werden, um das „Geburtsland“ einer Person darzustellen. Verwenden Sie zu diesem Zweck das Datenelement „Geburtsland“ innerhalb des Archetyps EVALUATION.birth_details.\r\n\r\nNicht zur Darstellung einer Religionszugehörigkeit verwenden. Verwenden Sie dazu den Archetyp CLUSTER.religion.\r\n\r\nDarf nicht verwendet werden, um das selbst identifizierte Geschlecht darzustellen. Verwenden Sie zu diesem Zweck das Datenelement „Geschlechtsidentität“ innerhalb des Archetyps EVALUATION.gender.\r\n\r\nNicht zur Darstellung von Sprachanforderungen für Übersetzungszwecke verwenden. Verwenden Sie dazu die CLUSTER.language.\r\n\r\nDarf nicht verwendet werden, um formelle Aufzeichnungen über den ethnischen Hintergrund darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et individs selvopplevde og vanligvis selvrapporterte tilknytning, likhet eller forbindelse med en eller flere grupperinger av mennesker.",
+          "keywords" : [ "etnisitet", "kultur", "språk", "nasjon", "stamme", "rase", "tilknytning", "tro", "slektskap", "nasjonalitet", "statsborgerskap", "identitet", "klan", "gruppe" ],
+          "use" : "Bruk for å registrere et individs selvopplevde og vanligvis selvrapporterte tilknytning, likhet eller forbindelse med en eller flere grupperinger av mennesker.\r\n\r\nEtnisitet er et konsept som ofte brukes inkonsekvent, som gjør at eksisterende eller historiske data kan variere voldsomt i innhold. Dette inkluderer, men er ikke begrenset til:\r\n\r\n- Langvarig og delt historie (muntlig eller skriftlig)\r\n- Kulturelle tradisjoner, inkludert familiære, sosiale og religiøse skikker\r\n- Delt geografisk opphav\r\n- Felles språk\r\n- En minoritet eller særskilt gruppe innenfor lokalsamfunnet\r\n\r\nI utarbeidelsen av denne arketypen har strukturen bevisst blitt laget enkel, for å kunne støtte hvilket som helst krav for å representere etnisitet. Når det er en allmenn og omforent forståelse av etnisitet og tilhørende verdisett, kan denne arketypen utvides for å dekke de kravene som utkrystalliserer seg. Dataelementet \"Etnisitet\" er åpen for å kunne repeteres, slik at mer enn én etnisk og kulturell identitet kan lagres, enten i form av et flervalg i et verdisett, eller ved at flere forekomster av \"Etnisitet\" blir registrert. For eksempel hvis man skal registrere eksplisitt tilhørighet til en urbefolkningsgruppe.\r\n\r\nDataelementet \"Opphav\" er også lagt til, for å legge til rette for å registrere tilhørighet til grupper som kan ha familiær og arvelig sykdom, slik som genetiske variasjoner som øker sannsynligheten for Crohns sykdom hos askenasiske jøder.\r\n\r\nAndel av overlapp mellom \"Etnisitet\" og \"Avstamning\" kan variere veldig mellom individer, men å separere disse to til distinkte dataelementer vil øke muligheten til å bruke dem til beslutningsstøtte og tilpasning av helsetjenester på en god måte.\r\n\r\nArketypen er utformet for å kunne fungere som en enkeltstående forekomst i en pasientjournal og som blir oppdatert som en ny versjon når den blir revidert.\r\n\r\nEtnisitet er ofte ansett som en del av de demografiske oppføringene i en journal. Likevel er etnisitet tatt inn som del av denne kliniske arketypen i de tilfellene en trenger å samle data som kan støtte kulturelt tilpasset og hensiktsmessige helsetjenester, for eksempel for urbefolkningsgrupper.\r\n\r\nKonseptet med kategorisering etter rase eller hudfarge er kontroversielt. Noen steder kan begrepet \"rase\" være akseptabelt og anses å være synonymt med \"etnisitet\", mens det er ulovlig andre steder. Noe som øker forvirring er at mange verdisett for etnisitet også inneholder verdier som beskriver fysiske karaktertrekk som hudfarge eller geografisk opprinnelse. \"Rase\" også er i noen myndighetsområder brukt som et klossete stedfortredende begrep for sosiale determinanter for helse. Vi anbefaler imidlertid sterkt å bruke arketyper som er laget spesielt for sosiale determinanter for helse for å få mer presis datafangst.",
+          "misuse" : "Skal ikke brukes for å registrere fødeland til et individ. Bruk elementet \"Country of birth\" i arketypen EVALUATION.birth_details til dette.\r\n\r\nSkal ikke brukes for å registrere religiøs tilknytning. Bruk arketypen CLUSTER.religion (Livssyn) til dette.\r\n\r\nSkal ikke brukes for å registrere den selvopplevde kjønnsidentiteten til et individ. Bruk elementet \"Kjønnsidentitet\" i arketypen EVALUATION.gender til dette.\r\n\r\nSkal ikke brukes for å registrere individets språk i forbindelse med behov for tolking. Bruk arketypen CLUSTER.language til dette.\r\n\r\nSkal ikke brukes for å representere eller erstatte formelle registreringer av etnisk bakgrunn eller for å vedlikeholde et offisielt demografisk register eller indeks. Bruk en formell Master Pasient Indeks for dette, eller arketyper som er basert på openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the affiliation, kinship or connection of an individual with one or more groupings of people, usually self-identified.",
+          "keywords" : [ "ethnicity", "culture", "language", "race", "tribe", "affiliation", "belief", "kinship", "identity", "clan", "group", "nationality", "citizenship", "nation", "political" ],
+          "use" : "Use to record the affiliation, kinship or connection of an individual with one or more groupings of people, usually self-identified.\r\n\r\nEthnicity is a concept that is frequently used inconsistently, such that existing or legacy data may be quite varied in content, including but not limited to:\r\n- A long-shared history (written or oral);\r\n- A cultural tradition, including family, social and religious customs;\r\n- A common geographic origin;\r\n- A common language; or\r\n- A minority or distinct group within the local community context.\r\n\r\nIn designing this archetype, the structure has deliberately been kept simple, to support any and all requirements for representing ethnicity. As the understanding around ethnicity and appropriate value sets are identified and agreed upon, this archetype may grow to support evolving clarity of requirements. The data element 'Ethnicity' allows multiple occurrences so that more than one ethnic and cultural identity to be recorded for the individual from a single value set, and also so that more than one representation of 'Ethnicity' can be recorded, for example explicitly recording First People status.\r\n\r\nThe 'Ancestry' data element has also been included to support health risk assessment related to family history and inherited disease, such as a genetic variations that increase the risk of Crohn's disease in Ashkenazi Jews. \r\n\r\nThe amount of overlap between 'Ethnicity' and 'Ancestry may vary enormously between individuals, but separating each into distinct data elements will allow appropriate usage within the clinical context for decision support and provision of healthcare.\r\n\r\nThis archetype has been designed to be recorded as a single instance within a health record, persisted, updated and revised over time as a new version.\r\n\r\nEthnicity is often considered as a component of a demographic record for an individual however it has been represented within this clinical archetype for situations when it needs to be represented in a clinical data collection or is required to support culturally sensitive and appropriate healthcare delivery, for example in First Nations communities.\r\n\r\nThe concept of categorisation by race or skin colour is controversial. In some places, the term 'race' may be considered acceptable and interchangeable with 'ethnicity', yet is illegal in others. Contributing to the confusion, many value sets for ethnicity also contain values that describe physical characteristics such as skin colour or geographical origin. The concept of 'Race' may sometimes be used as a clumsy proxy for identifying risk factors related to social determinants of health (SDOH), however it is strongly recommended that archetypes that represent SDOH concepts be used for more accurate data capture.",
+          "misuse" : "Not to be used to represent the 'Country of birth' of an individual. Use the 'Country of birth' data element within the EVALUATION.birth_details archetype for this purpose.\r\n\r\nNot to be used to record a religious affiliation. Use the CLUSTER.religion archetype for this purpose.\r\n\r\nNot to be used to record self-identified gender. Use the 'Gender identity' data element within the EVALUATION.gender archetype for this purpose. \r\n\r\nNot to be used to record language requirements for translation purposes. Use the CLUSTER.language for this purpose.\r\n\r\nNot to be used to represent or replace formal records of ethnic background or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index for this purpose, or archetypes based on the openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.ethnicity.v1",
     "differential" : true,
@@ -1161,7 +1216,99 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "E567F68BD0F0BE755DE0F5D504533ED1"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Repräsentation aller Aspekte einer Verordnung eines Arzneimittels, Impfstoffs, Ernährungsprodukts oder eines anderen therapeutischen Mittels für eine bestimmte Person.",
+          "keywords" : [ "Medikament", "Verordnung", "Rezept", "verschreiben", "verordnen", "Therapie", "Substanz", "Wirkstoff", "Arzneimittel", "therapeutisch", "OTC", "rezeptfrei", "therapeutisches Mittel", "Pharmazeutikum", "Produkt", "Posologie", "Dosierung", "Behandlung", "Flüssigkeit", "Ernährung", "Arzneimittelverordnung", "CPOE" ],
+          "use" : "Verwende diesen Archetypen, um alle Aspekte einer Verordnung eines Arzneimittels, Impfstoffs, Ernährungsprodukts oder medizinischen Bedarfs für eine bestimmte Person darzustellen.\r\n\r\nDer Archetyp ist für jede Arzneimittelart und die damit verbundene Verordnung bestimmt, unabhängig davon, ob sie von einem medizinischen Fachpersonal verschrieben wird oder, ob sie \"rezeptfrei\" erhältlich ist. Der Anwendungsbereich dieses Medikamenten-Archetyps umfasst auch Verordnungen von Impfungen, parenteralen Flüssigkeiten oder anderen therapeutischen Mitteln, wie Verbände, Ernährungsprodukte oder andere Erzeugnisse, die angewendet oder verabreicht werden, um eine therapeutische Wirkung zu erzielen, sowie ein gemeinsames Muster für die Datenerfassung haben.\r\n\r\nDer Archetyp ist für die Verwendung in einer Reihe von klinischen Kontexten konzipiert, einschließlich, aber nicht beschränkt auf:\r\n- eine Aufzeichnung in einer klinischen Beratung (COMPOSITION.encounter);\r\n- ein schriftliches Rezept eines Arztes, Zahnarztes, Krankenpflegers oder einer anders bezeichneten medizinischen Fachkraft für ein Arzneimittel oder ein Ernährungsprodukt, das ausgegeben und verabreicht werden soll (innerhalb eines COMPOSITION.prescription);\r\n- ein Element in einer aktuellen Medikamentenliste, einem Rezept oder einer Medikamentenübersicht (innerhalb der COMPOSITION.medication_list); und\r\n- ein Element in einem zusammenfassenden Dokuments, wie z.B. die Übertragung von Pflegeleistungen (COMPOSITION.transfer_summary) oder eine Überweisung (COMPOSITION.request).\r\n\r\nEine Medikamentenverordnung ist in meisten Fällen einfach - normalerweise für ein einzelnes Arzneimittel mit unkomplizierten Anweisungen für die Abgabe und Verabreichung. Dieser Archetyp soll jedoch auch komplexere therapeutische Verordnungen ermöglichen. Zum Beispiel:\r\n\r\n- eine reduzierte Dosis von Prednisolon über einen Zeitraum von Wochen;\r\n- Insulintitration mit Dosierung abhängig von Testergebnissen;\r\n- mehrere Medikamente, die gleichzeitig im Rahmen eines einzelnen Medikamentenplans verschrieben werden, wie beispielsweise eine Dreifachtherapie bei Magengeschwür;\r\n- intravenöse Verabreichung von Medikamenten oder Nahrungsergänzungsmitteln, einschließlich parenteraler Ernährung.\r\n\r\nDer Archetyp wurde daher so entworfen, um eine Reihe von Komplexitäten zuzulassen: \r\n- einfache Anweisungen bei Rezepten wie \"Furosemid 40 mg zwei Tabletten morgens und eine zum Mittagessen\", um die Kompatibilität mit bestehenden Systemen zu gewährleisten;\r\n- die Menge des Arzneimittels wird normalerweise in Form einer Anzahl und einer entsprechenden Dosiseinheit dargestellt. Alternativ kann jedoch auch ein Statement getroffen werden, um die Kompatibilität mit vorhandenen Systemen und die Abdeckung aller klinischen Szenarien sicherzustellen.\r\n- strukturierte Details für Dosis, Verabreichungsweg und Zeitpunkt, um eine vollständig berechenbare Spezifikation darzustellen.\r\n\r\nEs wurde auch so konzipiert, dass eine einzige Darstellung der Medikamentenverordnung folgendes darstellen kann:\r\n- komplexe aufeinanderfolgende Medikamentenverordnungen mit derselben Arzneimittelstärke werden innerhalb einer einzigen Verordnungsstruktur unterstützt;\r\n- mehrere Medikamentenverordnungen können verkettet werden, wenn verschiedene Medikamente oder Arzneizubereitungen nacheinander verabreicht werden müssen.\r\n\r\nDieser Archetyp eignet sich auch für die Verordnung von parenteralen Flüssigkeiten in Pflegeeinrichtungen, in denen es üblich ist, solche \"verordnungsfähige\" Stoffe herzustellen. In anderer Umgebung kann eine separate \"Verordnung parenteraler Flüssigkeit\" angebracht sein.\r\n\r\nSLOTs mit CLUSTER-Archetypen wurden aus drei Gründen verwendet, um einen Teil des Inhalts darzustellen:\r\n- um einen zentralen Archetyp zu erhalten, der für alle oben genannten Anwendungsfälle verwendet werden kann und dennoch Flexibilität bietet, wo es erforderlich ist, z.B. der SLOT „Arzneimitteldetails“', wo zusätzliche strukturierte Details hinzugefügt werden können. Ein Kandidat-Archetyp wird für Arzneimittel vorgeschlagen. Es ist möglich, dass in Zukunft andere CLUSTER-Archetypen für andere Zwecke, wie z.B. komplexe Verordnungen von parenteraler Ernährung, benötigt werden;\r\n- Unterstützung der Wiederverwendung von Archetypen in Situationen, in denen der Inhalt auch in anderen klinischen Kontexten verwendet wird, hauptsächlich im zugehörigen Archetyp ACTION.medication, um tatsächliche Abgabe, Verabreichung usw. darzustellen; und\r\n- um weniger genutzten Inhalt aus dem zentralen Archetyp-Framework zu entfernen.\r\n\r\nMehrfache Verordnungen können als separate Aktivitäten innerhalb dieser einzigen Archetypen-Instanz dargestellt werden, um eng gebundene Verordnungen verschiedener Medikamente zu tragen, z.B. H. pylori-Therapie, wenn diese nicht als einzelne Packung verschrieben wird.\r\n\r\nBeachten Sie, dass diese Verwendungen sowohl die Anwendungsfälle der FHIR-Profile „Medikation Order“ als auch „Medikation Statement“ zusammenfassen. D.h. dieser Archetyp ist eine Übereinstimmung für beide FHIR-Ressourcen, die im entsprechenden Kontext verwendet werden.",
+          "misuse" : "Nicht zur Repräsentation der Aktivitäten im Zusammenhang mit der Ausführung der Verordnung von Medikamenten, Impfstoffen, Nahrungsmitteln oder therapeutischen Mitteln verwenden, z. B. Angaben zur tatsächlichen Verabreichung oder Abgabe. Verwenden Sie dafür den Archetyp ACTION.medication.\r\n\r\nNicht zur Repräsentation der Verordnung von Blutprodukten verwenden, da dies einen grundlegend anderen klinischen Prozess beinhaltet und wahrscheinlich andere unterstützende Informationen erfordert. Verwenden Sie dafür den Archetyp INSTRUCTION.transfusion.\r\n\r\nNicht zur Repräsentation der Verordnung zum Einsetzen von Implantaten oder medizinischen Geräten wie Herzschrittmachern und Defibrillatoren verwenden. Verwenden Sie dafür den Archetyp INSTRUCTION.procedure",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera samtliga aspekter av en beställning av ett läkemedel, vaccin, näringspreparat eller annat terapeutiskt produkt för en identifierad individ.",
+          "keywords" : [ "medicinering", "order", "beställning", "ordinera", "terapi", "substans", "läkemedel", "terapeutisk", "farmaceutisk", "produkt", "dosering", "behandling", "vätska", "näring", "medicin" ],
+          "use" : "Används för att registrera samtliga aspekter av en beställning av ett läkemedel, vaccin, näringspreparat eller annan terapeutisk produkt för en identifierad individ.\r\n\r\nDen här arketypen är avsedd att användas för alla typer av läkemedel och relaterade ordrar, oavsett om de ordinerats av vårdpersonal eller är tillgängligt för köp \"över disk\". Omfattningen av denna arketyp inkluderar även beställning av vaccin, parenterala vätskor och andra terapeutiska produkter, såsom bandage, näringspreparat eller andra föremål som appliceras eller administreras för att uppnå en terapeutisk effekt. \r\n\r\nDenna arketyp är utformad för att användas vid ett flertal kliniska sammanhang, bland annat: \r\n- dokumentation i ett kliniskt samråd (COMPOSITION.encounter);\r\n- skriftlig ordination av en läkare, tandläkare, sjuksköterska eller annan utsedd hälso- och sjukvårdspersonal för ett läkemedel eller ett näringsperparat som ska dispenseras och administreras (COMPOSITION.prescription);\r\n- objekt i aktuell läkemedelslista, ordination eller läkemedelsjournal (COMPOSITION.medication_list); och\r\n- objekt i ett sammanfattande dokument för exempelvis vårdöverföring (COMPOSITION.transfer_summary) eller en remiss (COMPOSITION.request).\r\n\r\nI många fall är en läkemedelsbeställning simpel och omfattar vanligtvis en läkemedelsartikel med okomplicerade instruktioner för dosering och administrering. Denna arketyp är dock utformad för att även möjliggöra mer komplexa beställningar. Till exempel:\r\n- en reducerande dos av prednisolon under en period på några veckor;\r\n- titrering av insulin, med dosering beroende på testresultat;\r\n- flera läkemedel (del av samma läkemedelsregim) som ordinerats samtidigt. Exempelvis trippelbehandling för magsår; och\r\n- intravenös administrering av läkemedel eller näringstillskott, inklusive parenteral nutrition. \r\n\r\nArketypen har därför utformats för att hantera olika komplexiteter:\r\n- enkla beställningsinstruktioner som \"furosemid 40 mg två tabletter på morgonen och en vid lunch\" för att säkerställa kompatibilitet med befintliga system; och\r\n- läkemedelsmängden betecknas vanligtvis genom antal och motsvarande dosenhet. För att säkerställa kompatibilitet med befintliga system samt omfatta alla kliniska scenarier, kan det dock finnas alternativa redogörelser; genom att \r\n- strukturera detaljer för dosering, administreringsväg och tidpunkt för att uppnå fullständig specifikation. \r\n\r\nArketypen har även utformats så att strukturen för alla läkemedelsbeställningar omfattar:\r\n- komplexa och sekventiella läkemedelsbeställningar med samma beredningsstyrka; och\r\n- flera läkemedelsbeställningar kan under omständigheter där olika läkemedel eller preparat måste ges i följd länkas.\r\n\r\nArketypen är även lämplig för beställning av parenterala vätskor, trots att dessa normalt är \"ordinationsbara\" artiklar. I andra fall kan dock en separat \"parenteral vätskebeställning\" vara lämpligt. \r\n\r\nDe SLOTs som innehåller CLUSTER-arketyper används för att representera vis del av innehållet. Detta grundas på tre skäl:\r\n- För att säkerställa att en kärnarketyp kan användas för alla ovanstående användningsfall, samt möjliggöra flexibilitet där det behövs. Under exempelvis ”Detaljer om beredning” kan ytterligare information tilläggas. För läkemedel föreslås en kandidatarketyp. Det är även möjligt att andra CLUSTER-arketyper i framtiden kan krävas för ytterlige ändamål, såsom komplexa parenterala nutritionsordrar;\r\n- för att stödja återanvändning av arketyper i situationer där innehållet används i flera kliniska sammanhang, i synnerhet ACTION.medication-arketypen som används för registrering av dispensering, administrering osv; och\r\n- för att avlägsna mindre vanligt förekommande innehåll från kärnarketypen.\r\n\r\nFlera beställningar kan representeras som separata aktiviteter inom denna arketypsinstans, för hantering av beställningar av olika läkemedel, exempelvis terapi för H. pylori när det inte ordineras som enpack.\r\n\r\nDet bör nämnas att dessa användningsområden omfattar både fall av FHIR-läkemedelsorder och läkemedelsutlåtande. Denna arketyp är således anpassad för båda FHIR-resurserna, och används i lämpligt sammanhang.",
+          "misuse" : "Ska inte användas för att registrera aktiviteter relaterade till att utföra en beställning av läkemedel, vaccin, näringspreparat eller terapeutiska produkter, såsom information om administrering eller dispensering. Använd i stället ACTION.medication för detta ändamål.\r\n\r\nSka inte användas för att registrera beställning av blodprodukter, då denna aktivitet kräver annan klinisk process. Använd i stället INSTRUCTION.transfusion för detta ändamål.\r\n\r\nSka inte användas för att registrera beställning av insättning av implantat eller medicintekniska produkter som pacemaker och defibrillatorer. Använd i stället INSTRUCTION.procedure för detta ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar todos los aspectos de una orden de medicamento, vacuna, producto nutricional u otro ítem terapéutico para un individuo identificado.",
+          "keywords" : [ "medicamento", "orden", "prescribir", "prescripción", "terapéutica", "substancia", "droga", "terapéutico", "sin receta", "insumo terapéutico", "fármaco", "producto", "posología", "tratamiento", "fluido", "nutrición", "CPOE" ],
+          "use" : "Utilizar para el registro de todos los aspectos de una orden de medicamento, vacuna, producto nutricional u otro ítem terapéutico para un individuo identificado.\r\n\r\nSu objetivo es la utilización para cualquier orden de medicamento o ítems relacionados, ya sea que los prescriba un profesional de la salud o que se encuentren disponibles sin receta médica. El alcance de este arquetipo de medicamento incluye órdenes de vacuna, fluidos parenterales u otros insumos terpéuticos tales como vendajes, productos nutricionales u otros ítems que se aplican o son administrados para obtener un efecto terapéutico, y que tiene un patrón común de registro de datos.\r\n\r\nEste arquetipo seta diseñado para ser utilizado en un conjunto de contexto clínicos que incluyen, pero no se limitan, a:\r\n- un registro de una consulta clínica (COMPOSITION.encounter);\r\n- una prescripción escrita por un médico, odontólogo, enfermero u otro profesional de la salud, para una medicación o producto nutricional a ser dispensado y administrado (como parte de una COMPOSITION.prescription);\r\n- un ítem incluido en una lista de medicamentos recibidos actualmente, en una prescripción o en una lista de medicamentos (como parte de una COMPOSITION.medication_list); y como\r\n- un ítem incluido en un documento de resumen, tal como una transferencia de sitio de cuidados (COMPOSITION.transfer_summary) o una interconsulta (COMPOSITION.request).\r\n\r\nEn muchos casos una orden de medicamento será simple -típicamente para un solo ítem medicamentoso con instrucciones carentes de complejidad para su dispensación y administración. Sin embargo, este arquetipo también esta diseñado para permitir órdenes terapéuticas mas complejas, como por ejemplo:\r\n- la reducción de una dosis de prednisolona a lo largo de un período de semanas;\r\n- la titulación de insulina, donde la dosis dependerá de los resultados de una prueba;\r\n- la prescripción simultanea de varios medicamentos como parte de un régimen único de medicamentos, tales como la terapia triple para la úlcera péptica; y\r\n- la administración endovenosa de medicamentos o suplementos nutricionales, incluyendo nutrición parenteral.\r\n\r\nEl arquetipo ha sido por lo tanto diseñado para permitir diversos rangos de complejidad, desde:\r\n- instrucciones narrativas simples para órdenes tales como \"furosemida 40 miligramos, dos tabletas por la mañana y una al almuerzo\", para asegurar la compatibilidad con sistemas existentes\r\n- la cantidad de la medicación, usualmente representada en términos de un número y su correspondiente unidad de dosis, pero que alternativamente puede ser representada mediante una narrativa para asegurar compatibilidad con sistemas existentes y la cobertura de diferentes escenarios clínicos; hasta\r\n- el detalle estructurado de la dosis, vía de administración y temporalidad, para así representar una especificación completamente computable.\r\n\r\nTambién ha sido diseñado de modo tal que la estructura de una sola orden de medicamento permita representar:\r\n- una secuencia compleja de órdenes de medicamento que utiliza la misma potencia del preparado como una sola estructura de orden; y\r\n- múltiples órdenes de medicamentos encadenadas en circunstancias donde diferentes medicamentos o preparados deben ser administrados conforme a una secuencia.\r\n\r\nEste arquetipo es también adecuado para ordenar fluidos en entornos de cuidado donde es de uso corriente que estos ítems sean \"prescribibles\". EN otros contextos una orden separada de fluido parenteral podría ser mas apropiada.\r\n\r\nLos SLOTs que contienen arquetipos CLUSTER han sido utilizados para representar parte del contenido por tres razones:\r\n- Para asegurar un arquetipo de base que pueda ser utilizado en todos los casos arriba descritos pero que permitan flexibilidad alli donde esta es requerida, como por ejemplo el SLOT `Detalles de la preparación´ en el cual un mayor detalle estructurado puede ser agregado. Se ha sugerido un arquetipo candidato para Medicaciones. Es posible que otros arquetipos CLUSTER sean necesarios en el futuro para otros propósitos tal como las órdenes de nutrición parenteral compleja;\r\n- Para permitir la re-utilización del arquetipo en situaciones en las cuales el contenido ha sido identificado como utilizado también en otros contextos clínicos, en particular en forma apareada como el arquetipo ACTION.medication, para el registro de la dispensación, administración, etc. concretas; y\r\n- Para remover del arquetipo base los contenidos menos comúnmente utilizados.\r\n\r\nVarias órdenes pueden ser representadas como actividades separadas dentro de una sola instancia de este arquetipo, para el uso de órdenes fuertemente vinculadas (como la terapia del Helicobacter Pylori) cuando estas nos son prescriptas como paquete único.\r\n\r\nDebe tenerse en cuenta que estos usos subsumen lso casos de uso tanto de la Orden de Medicamento FHIR como de la Declaración de Medicamento, es decir que este arquetipo coincide con ambos recursos FHIR, utilizados en el contexto apropiado.",
+          "misuse" : "No debe ser utilizado para el registro de las actividades relacionadas con el cumplimiento de la orden del medicamento, vacuna, producto nutricional o ítem terapéutico, tal como los detalles de su administración o dispensa. Se debe utilizar el ACTION.medication para este propósito.\r\n\r\nNo debe ser utilizado para el registro de órdenes de sangre o sus preparados, lo cual involucra un proceso clínico fundamentalmente diferente que muy probablemente requiera otro tipo de información. Se debe utilizar el ACTION.transfusion para este propósito.\r\n\r\nNo debe ser utilizado para el registro de órdenes de inserción de implantes o dispositivos médicos tales como marcapasos o defibriladores. Se debe utilizar el ACTION.procedure para este propósito.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere alle aspekter av ordinering av et legemiddel, en vaksine, ernæringsprodukt eller medisinsk forbruksmateriell for et spesifikt individ.",
+          "keywords" : [ "medikasjon", "foreskriving", "forordning", "forordne", "terapi", "substans", "stoff", "virkestoff", "medikament", "legemiddel", "terapeutisk", "medisinsk forbruksmateriell", "ordinering", "preparat", "spesialpreparat", "diagnostikum", "forskrivning", "forskriving", "resept", "legemiddelhåndtering", "farmasøytisk", "produkt", "posologi", "ordinasjon", "rekvirering", "behandling", "væske", "ernæring", "ordinere", "medisin", "medisiner", "medisinering" ],
+          "use" : "Brukes for å registrere alle aspekter av ordinering av et legemiddel, en vaksine, enæringsvare eller medisinsk forbruksmateriell for et spesifikt individ.\r\n\r\nArketypen kan brukes i alle legemiddelrelaterte ordineringer, enten de er for reseptpliktige legemidler ordinert av en kliniker, eller for reseptfrie legemidler. Arketypen dekker også ordinering av vaksiner, parenterale væsker, eller medisinsk forbruksmateriell, som bandasjer, ernæringsprodukter eller andre varer som påføres eller administreres for å ha en terapeutisk effekt, og der dataene som skal registreres er de samme.\r\n\r\nArketypen er designet for bruk i en rekke ulike kliniske sammenhenger, for eksempel:\r\n- en registrering i en klinisk konsultasjon (COMPOSITION.encounter).\r\n- en resept skrevet av en lege, tannlege eller annet helsepersonell, på et legemiddel eller ernæringsprosdukt som skal utdeles eller administreres (i en COMPOSITION.prescription).\r\n- et element i en legemiddelliste, resept eller legemiddelkurve (COMPOSITION.medication_list)\r\n- et element i et oppsummeringsdokument som f.eks. en epikrise (COMPOSITION.transfer_summary) eller en henvisning (COMPOSITION.request).\r\n\r\nMerk at disse bruksområdene omfatter FHIR-ressursene for både Medication Order og Medication Statement.\r\n\r\nI mange tilfeller vil legemiddelordineringen være enkel - typisk for en enkelt legemiddelvare med ukompliserte instruksjoner for utdeling og administrering. Arketypen er imidlertid også utviklet for å tillate mer komplekse ordineringer, for eksempel:\r\n- ved nedtrapping av en prednisolondose over flere uker.\r\n- ved titrering av insulin, hvor dosering er avhengig av prøveresultater.\r\n- flere legemidler ordinert på samme tidspunkt som en del av et samlet behandlingsregime, for eksempel trippelbehandling for magesår.\r\n- ved parenteral administrering av legemidler eller ernæring, inkludert parenteral ernæring.\r\n\r\nArketypen er derfor utviklet for å tillate ulik kompleksitet, fra\r\n- enkle fritekstinstrukser for ordineringer som \"Furosemid 40 mg, to tabletter om morgenen og en til lunsj\" for å sikre kompatibilitet med eksisterende systemer, og\r\n- legemiddelmengden representeres som regel ved et tall med tilhørende måleenhet, alternativt med fritekst for å sikre kompatibilitet med eksisterende systemer og for å dekke alle kliniske scenarier\r\ntil\r\n- strukturerte detaljer for dose, administreringssvei og administreringsstidspunkter for at datamaskiner skal kunne lese og gjøre beregninger med dataene.\r\n\r\nArketypen er designet slik at en enkel legemiddelordinering kan representere:\r\n-komplekse sekvensielle legemiddelordineringer som bruker samme preparatstyrke i samme ordineringsstruktur.\r\n-flere legemiddelordineringer kan lenkes, der ulike legemidler eller blandinger må administreres sekvensielt.\r\n\r\nArketypen er også egnet for å ordinere væsker, der det er vanlig at disse ordineres. I andre sammenhenger kan det være mer passende å bruke en egen arketype for væskeforordninger.\r\n\r\nMengden av et legemiddel representeres vanligvis med et tall og en enhet, men det kan også dokumenteres i fritekst for å sikre kompatibilitet med eksisterende systemer og for å dekke alle scenarier.\r\n\r\nSLOTer med CLUSTER-arketyper brukes for å representere deler av innholdet av tre årsaker:\r\n- For å sikre en kjernearketype som kan brukes i alle de overnevnte brukscasene, men likevel være fleksibel der det trengs, f.eks. i SLOTet \"Legemiddeldetaljer\" der ytterligere strukturerte detaljer kan legges til. Det er foreslått en arketype for detaljer om legemidler, og det kan tenkes at man i fremtiden vil trenge andre CLUSTER-arketyper for andre formål, som f.eks. komplekse ordineringer av parenteral ernæring.\r\n- for å tillate gjenbruk av arketyper i situasjoner hvor innholdet også brukes i andre kliniske kontekster, i hovedsak i den tilhørende arketypen ACTION.medication for å registrere faktisk utdeling, administrering osv.\r\n- for å fjerne mindre brukt innhold fra arketypens rammeverk.\r\n\r\nDet er mulig å legge inn flere ordinasjoner som aktiviteter innenfor én instans av arketypen for å representere tett sammenbundne ordinasjoner av forskjellige legemidler, for eksempel en legemiddelpakke mot H. pylori der denne ikke ordineres som en enkelt pakning.\r\n\r\nMerk at disse bruksområdene innbefatter FHIR-ressursene for både \"Medication Order\" og \"Medication Statement\", det vil si at denne arketypen matcher begge disse FHIR-ressursene i passende brukssammenhenger.",
+          "misuse" : "Skal ikke brukes for å registrere faktisk administrering eller utdeling av legemidler, vaksiner, parenterale væsker, ernæringsprodukter eller medisinsk forbruksmateriell. Bruk arketypen ACTION.medication for dette formålet.\r\n\r\nSkal ikke brukes for å registrere ordinering av blodkomponenter, som omfatter en fundamentalt ulik klinisk prosess og sannsynligvis vil trenge ulik støtteinformasjon. Bruk arketypen INSTRUCTION.transfusion for dette formålet.\r\n\r\nSkal ikke brukes for å registrere ordinering av innlegging av implantater og medisinsk utstyr som pacemakere og defibrillatorer. Bruk arketypen INSTRUCTION.procedure for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar todos os aspectos de uma prescrição de medicamento, vacina, produtos nutricionais ou outros itens terapêuticos para um indivíduo identificado.",
+          "keywords" : [ "medicamento", "prescrição", "prescrever", "terapia", "substância", "droga", "terapêutico", "Otc", "produto terapêutico", "Farmacêutico", "produtos", "Posologia", "tratamento", "Solução", "nutrição", "Prescrição Eletrônica" ],
+          "use" : "Utilizado para registrar todos os aspectos da prescrição de medicamentos, vacinas, produtos nutricionais ou outros itens terapêuticos, para um indivíduo identificado.\r\n\r\nDestina-se a ser usado para qualquer tipo de medicamento e prescrição relacionada, quer seja prescrito por um profissional de saúde ou disponível para compra \"no balcão\"da farmácia. O escopo deste arquétipo de medicamentos também inclui prescrições de vacinas, fluidos parenterais ou outros produtos terapêuticos, como bandagens, produtos nutricionais ou outros ítens que possuem um padrão comum para o seu registro e são aplicados ou administrados com vistas a um efeito terapêutico. \r\n\r\nEste arquétipo é projetado para ser usado em vários contextos clínicos, incluindo, entre outros:\r\n- um registro em uma consulta clínica (COMPOSITION.encounter);\r\n- uma receita escrita por um médico, dentista, ou outro profissional de saúde autorizado para prescrever uma medicamento ou produto nutricional a ser dispensado e administrado (COMPOSITION.prescription);\r\n- um ítem em uma lista atual de medicamento, receita ou carta de medicamentos (dentro de COMPOSITION.medication_list); e\r\n- um ítem em um documento de resumo, como a transferência de cuidados (COMPOSITION.transfer_summary) ou um documento de contra-referência (COMPOSITION.request).\r\n\r\nEm muitos casos, uma prescrição de medicamento será simples - tipicamente para um único item de medicamento com instruções simples para a sua dispensação e administração. No entanto, este arquétipo foi também projetado para permitir prescrições mais complexas. Por exemplo:\r\n\r\n-\tuma redução de dose de prednisolona durante um período de semanas;\r\n-\tfracionamento de insulina, com dosagem dependente dos resultados do teste;\r\n-\tmedicamentos múltiplos prescritos simultaneamente como parte de um regime de fármaco único, como uma terapia tripla para úlcera péptica; e\r\n-\tadministração intravenosa de medicamentos ou suplementos nutricionais, incluindo nutrição parenteral.\r\n\r\nO arquétipo foi, portanto, projetado para atender prescrições de maior complexidade, como, por exemplo: \r\n-\tinstruções narrativas simples tais como \"furosemida 40mg dois comprimidos pela manhã e um no almoço\" para assegurar a compatibilidade com os sistemas existentes; \r\n-\ta quantidade do medicamento geralmente é representada por um número e uma unidade de dose correspondente, no entanto, pode haver uma descrição em texto livre para garantir a compatibilidade com os sistemas existentes e a cobertura de todos os cenários clínicos; através de\r\n-\tdetalhes estruturados para a dose, via e duração para representar uma especificação totalmente computável.\r\n\r\nEste arquétipo foi também projetado para que uma única estrutura de prescrição de medicamento possa representar:\r\n\r\n-\tPrescrições sequencias complexas de medicamento com a mesma concentração de preparação representados em uma única estrutura de prescrição; e\r\n-\tmúltiplas prescrições de medicamentos que podem ser encadeadas em circunstâncias em que diferentes medicamentos ou preparações precisem ser administrados sequencialmente.\r\n\r\nEste arquétipo é também adequado para prescrição de soluções parenterais, em cenários de atendimento onde é normal prescrever estes itens. Em outras cenários, uma prescrição separada de soluções parenterais poderá ser mais apropriada.\r\n\r\nSLOTs contendo arquétipos do tipo CLUSTER foram utilizados ​​para representar parte do conteúdo por três razões:\r\n-\tPara garantir que um arquétipo básico possa ser utilizado em todos os casos de uso descritos acima, oferecendo flexibilidade onde for necessário, por exemplo, o SLOT de \"Detalhes da preparação\", permite que detalhes adicionais estruturados da preparação possam ser adicionados. Existe um arquétipo sugerido para medicamentos. É possível que outros arquétipos do tipo CLUSTER sejam necessários no futuro, para outros fins, como pedidos complexos de nutrição parenteral;\r\n-\tapoiar a reutilização do arquétipo em situações em que o conteúdo foi identificado como sendo utilizado também em outros contextos clínicos, em particular o arquétipo ACTION.medication (para deste arquéitpo) para gravação de distribuição real, administração, etc. e\r\n-\tremover o conteúdo de menor utilização do núcleo do arquétipo. \r\n\r\nVárias prescrições podem ser representadas como atividades separadas nesta instância de arquétipo, para, por exemplo, representar prescrições de diferentes medicamentos, conectadas entre si, como ocorre na terapia de H. pylori, quando se opta por não prescrever como um único pacote.\r\n\r\nObservar que esses casos de usos acima descritos incluem os casos de uso da Prescrição de Medicamento e Medicamentos do FHIR. Isto é, este arquétipo é uma correspondência para ambos os recursos do FHIR, desde que utilizado no contexto apropriado.",
+          "misuse" : "Não deve ser utilizado para registrar as atividades relacionadas à realização da prescrição de medicação, vacina, produto nutricional ou item terapêutico, como detalhes sobre a administração ou a dispensação. Use o arquétipo ACTION.medication para este propósito.\r\n\r\nNão deve ser utilizado para registrar o pedido de produtos sanguíneos, o que envolve um processo clínico fundamentalmente diferente e é provável que exija informações adicionais diferentes. Use o arquétipo INSTRUCTION.transfusion para este propósito.\r\n\r\nNão deve ser utilizado para registrar a ordem de inserção de implantes ou dispositivos médicos, como marcapassos e desfibriladores. Utilize o procedimento INSTRUCTION.Para este fim.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record all aspects of an order of a medication, vaccine, nutritional product or other therapeutic item for an identified individual.",
+          "keywords" : [ "medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "otc", "therapeutic good", "pharmaceutical", "product", "posology", "treatment", "fluid", "nutrition", "CPOE", "medicine" ],
+          "use" : "Use to record all aspects of an order of a medication, vaccine, nutritional product or other therapeutic item for an identified individual.\r\n\r\nIt is intended to be used for any type of medication and related order, whether prescribed by a health professional or available for purchase 'over the counter'. The scope of this medication archetype also includes orders for vaccinations, parenteral fluids or other therapeutic goods, such as bandages, nutritional products or other items that are applied or administered to have a therapeutic effect and which have a common pattern for data recording.\r\n\r\nThis archetype is designed to be used in a number of clinical contexts, including but not limited to:\r\n- a record in a clinical consultation (COMPOSITION.encounter);\r\n- a written prescription by a physician, dentist, nurse practitioner, or other designated health professional for a medication or nutritional product to be dispensed and administered (within a COMPOSITION.prescription);\r\n- an item in a current medication list, prescription or drug chart (within COMPOSITION.medication_list); and\r\n- an item in a summary document such as transfer of care (COMPOSITION.transfer_summary) or a referral (COMPOSITION.request).\r\n\r\nIn many cases a medication order will be simple – typically for a single medication item with uncomplicated instructions for dispensing and administration. However this archetype is also designed to allow for more complex therapeutic orders. For example:\r\n\r\n- a reducing dose of prednisolone over a period of weeks;\r\n- titration of insulin, with dosing dependent on test results;\r\n- multiple medications prescribed simultaneously as part of a single drug regimen, such as a triple therapy for peptic ulcer; and\r\n- intravenous administration of medications or nutrition supplements, including parenteral nutrition.\r\n\r\nThe archetype has therefore been designed to allow for a range of complexity, from:\r\n- simple narrative instructions for orders like 'furosemide 40mg two tablets in the morning and one at lunch' to ensure compatibility with existing systems; and\r\n- the amount of medication is usually represented in terms of a number and corresponding dose unit, however there can alternatively be a narrative statement to ensure compatibility with existing systems and coverage of all clinical scenarios; through to\r\n- structured detail for dose, route and timing to represent a fully computable specification.\r\n\r\nIt has also been designed so that a single medication order structure can represent:\r\n- complex sequential medication orders using the same preparation strength to be supported within a single order structure; and\r\n- multiple medication orders can be chained in circumstances where different medications or preparations need to be given sequentially.\r\n\r\nThis archetype is also suitable for ordering parenteral fluids, in care settings where it is normal practice to make these 'prescribable' items. In other settings a separate 'parenteral fluid order' may be appropriate.\r\n\r\nSLOTs containing CLUSTER archetypes have been used to represent some of the content for three reasons:\r\n- To ensure a core archetype that can be used for all the above use cases, yet allow flexibility where it is required, for example the ‘Preparation details’ SLOT where additional structured detail can be added. A candidate archetype has been suggested for Medications. It is possible that other CLUSTER archetypes may be required in future for other purposes such as complex parenteral nutrition orders;\r\n- to support archetype re-use in situations where the content has been identified as being also used in other clinical contexts, in particular the paired ACTION.medication archetype for recording actual dispensing, administration etc; and\r\n- to remove less commonly used content from the core archetype framework.\r\n\r\nMultiple orders can be represented as separate activities within this single archetype instance to carry tightly bound orders of different medications, for example, H. pylori therapy when this is not prescribed as a single pack.\r\n\r\nIt should be noted that these uses subsume both the FHIR Medication Order and Medication Statement use cases. i.e this archetype is a match for both FHIR resources, used in the appropriate context.",
+          "misuse" : "Not to be used to record the activities related to carrying out the order for medication, vaccine, nutritional product or therapeutic item, such as details about actual administration or dispensing. Use the ACTION.medication for this purpose.\r\n\r\nNot to be used to record the ordering of blood products, which involves a fundamentally different clinical process and is likely to require different supporting information Use the INSTRUCTION.transfusion for this purpose.\r\n\r\nNot to be used to record the order for insertion of implants or medical devices such as pacemakers and defibrillators. Use the INSTRUCTION.procedure for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
     "differential" : true,
@@ -1274,6 +1421,102 @@
         "email" : "osmeire.acsanzovo@hsl.org.br"
       },
       "accreditation" : "R.N.",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "054bdf95-1a3f-4eb2-bdb5-f9a55c45ba35",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "FB39AD6D938A6947F2FA96116C8ADAB0"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.gender.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-gender-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "nb" : { },
+        "en" : { },
+        "de" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "12fd01b8-5f87-406e-984d-eb9f4b215be3",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Kim Sommer, Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Emma Malm",
+        "organisation" : "Karolinska Universitetssjukhuset",
+        "email" : "emma.malm@cambio.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen, Mikkel Johan Gaup Grønmo, Silje Ljosland Bakke",
+        "organisation" : "Oslo universitetssykehus, Helse Nord, Helse Vest IKT AS",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no"
+      },
       "otherDetails" : { }
     } ]
   } ],
